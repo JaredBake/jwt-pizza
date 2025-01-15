@@ -11,7 +11,6 @@ As part of `Deliverable ⓵ Development deployment: JWT Pizza`, start up the app
 | Login new user<br/>(t@jwt.com, pw: test)            |   login.tsx           | [PUT] api/auth                   |  SELECT * FROM user WHERE email=?    SELECT * FROM userRole WHERE userId=?   |
 | Order pizza                                         |   menu.tsx            |[GET] api/order/menu              | SELECT * FROM menu              |
 | Verify pizza                                        |   delivery.tsx        |[POST] api/order/verify           | SELECT id, franchiseId, storeId, date FROM dinerOrder WHERE dinerId=? LIMIT ${offset},${config.db.listPerPage}   |
-
 | View profile page                                   | dinerDashboard.tsx    | [GET] api/order                  | SELECT userId FROM auth WHERE token=?             |
 | View franchise<br/>(as diner)                       |franchiseDashboard.tsx | [GET] api/franchise/7            |  SELECT id, name FROM franchise SELECT id, name FROM store WHERE franchiseId=?            |
 | Logout                                              |   logout.tsx          | [DELETE] api/auth                |  DELETE FROM auth WHERE token=?            |
