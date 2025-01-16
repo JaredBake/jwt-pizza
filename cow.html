@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .surprise-btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Press the Button for a Surprise!</h1>
+        <button class="surprise-btn" onclick="showSurprise()">Press me!</button>
+        <p id="surprise-message" style="display:none; font-size: 20px; color: #333;"></p>
+    </div>
+    <script>
+        function showSurprise() {
+            var message = document.getElementById("surprise-message");
+            message.style.display = "block";
+            message.innerHTML = "Surprise! You did a great job!";
+        }
+    </script>
+</body>
+</html>
