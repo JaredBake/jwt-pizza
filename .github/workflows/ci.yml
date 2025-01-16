@@ -13,7 +13,7 @@ jobs:
       - name: create static deployment file
         run: |
           mkdir dist
-          cp cow.html dist/index.html
+          cp dist/cow.html dist/index.html
 
       - name: Update pages artifact
         uses: actions/upload-pages-artifact@v3
